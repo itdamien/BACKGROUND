@@ -1,0 +1,17 @@
+idth: 768px) {
+    #main {
+        flex-direction: column;
+    }
+    .profile, .content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    header {
+        font-size: 1.2em;
+    }
+}
