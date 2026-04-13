@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid technique</title>
+  
+</head>
+<body>
+    <div class="div-container">
+        <div class="item" style="grid-area: box1;"><h1>item1</h1></div>
+        <div class="item" style="grid-area: box2;">item2</div>
+        <div class="item" style="grid-area: box3;">item3</div>
+        <div class="item" style="grid-area: box4;">item4</div>
+        <div class="item" style="grid-area: box5;">item5</div>
+        <!-- <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div> -->
+        
+    </div>
+    <style>
+        body{
+            padding: 30vh;
+        }
+    .item{
+    padding: min(5em 8%);
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+.item:hover{
+    transform: translateY(-8px);
+    background: greenyellow;
+    color: black;
+    cursor: url("https://github.com/itdamien");
+}
+.div-container{
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    gap: 1em;
+    max-width: 100%;
+
+    grid-template-areas: 
+    "box1 box2 box2 box3"
+    "box1 box4 box5 box5";
+    padding: 5em 8%;
+   
+}
+.div-container h1{
+    opacity: 0.5;
+}
+@media(max-width: 3rem){
+   .div-container{
+
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box1 box1 box3"
+    "box1 box4 box5";
+ }
+   }
+
+ @media(max-width: 42em){
+    .div-container{
+ 
+        grid-template-areas: none
+        "box1 box2"
+        "box3 box2"
+        "box3 box4"
+        "box5 box4";
+
+    }
+
+} 
+</style>
+</body>
+</html>
